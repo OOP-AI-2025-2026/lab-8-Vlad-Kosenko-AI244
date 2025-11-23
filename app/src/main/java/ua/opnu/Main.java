@@ -27,7 +27,8 @@ public class Main {
 
         // 4. Конструктор з null
         try {
-            MyOptional<String> broken = new MyOptional<>(null);
+            MyOptional<String> broken;
+            broken = new MyOptional<>(null);
             System.out.println("unexpected: " + broken);
         } catch (IllegalArgumentException ex) {
             System.out.println("Правильно не дозволив null: " + ex.getMessage());
